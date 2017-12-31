@@ -6,18 +6,23 @@
   <!-- BOOTSTRAP CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 </head>
 
 <body>
   <header>
-    <nav class="navbar navbar-fixed-top navbar-expand-lg navbar-light bg-light">
-    <a class="Newz" >notez</a>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-fixed-top navbar-expand-lg navbar-light bg-dark">
+    <div class="container-fluid">
+      <div class="navbar-header">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-
     <div class="collapse navbar-collapse" id="navbar">
-      <ul class="navbar-nav mr-auto">
+      <ul class="nav navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#" id="home">newz</a>
+        </li>
         <li class="nav-item active">
           <a class="nav-link" href="#" id="savedArticles">Saved Articles<span class="sr-only">(current)</span></a>
         </li>
@@ -31,58 +36,58 @@
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             <a class="dropdown-item" href="#">Business</a>
             <a class="dropdown-item" href="#">Politics</a>
-<!--             <div class="dropdown-divider"></div> -->
             <a class="dropdown-item" href="#">Technology</a>
           </div>
         </li>
       </ul>
-      <form class="form-inline my-2 my-lg-0">
+<!--       <form class="form-inline my-2 my-lg-0">
         <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Search</button>
-        </form>
+        </form> -->
       </div>
     </nav>
+    <!-- BANNER AREA -->
+    <header class="banner">
+      <div class="container-fluid" id="bannerArea">
+        <div class="row">
+          <div class="col-lg-12 text-left">
+            <br><br><br><br><br><br>
+            <div class="container">
+              <h1>Hi, Connie.</h1>
+              <h4>Here are your most recently saved articles:</h4><br>
+              <div class="container" id="newSaves"></div>
+              <div class="container" id="savedContent">
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
   </header>
 
   <div class="wrapper">
-    <nav id="sidebar">
-        <!-- Sidebar Header -->
-        <div class="sidebar-header">
-            <h3>Welcome, Connie.</h3>
+    <!-- ARTICLE CARDS HERE -->
+    <div class="jumbotron">
+      <div id="content">
+        <div class="container">
+          <h1>Top Headlines Today</h1><hr><br><br>
+        <div class="row">
+          <div class="container"><h3>Business</h3><br></div>
         </div>
-
-        <!-- Sidebar Links -->
-        <ul class="list-unstyled components">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#">Your Saved Articles</a></li>
-            <li><a href="#">Article 1</a></li>
-            <li><a href="#">Article 2</a></li>
-        </ul>
-    </nav>
-
-<!-- </div> -->
-
-
-  <div class="jumbotron">
-    <div id="content">
-      <div class="row">
-        <div class="container"><h3>Business</h3></div>
+        <div class="container">
+        <div class="row" id="business-col"></div></div>
+        <div class="row">
+          <div class="container"><br><h3>Politics</h3><br></div>
+        </div>
+        <div class="container">
+        <div class="row" id=politics-row></div></div>
+        <div class="row">
+          <div class="container"><br><h3>Technology</h3><br></div>
+        </div>
+        <div class="container">
+        <div class="row" id=tech-row></div></div>
       </div>
-      <div class="row" id="business-col"></div>
-      <div class="row">
-        <div class="container"><h3>Politics</h3></div>
-      </div>
-      <div class="row" id=politics-row></div>
-      <div class="row">
-        <div class="container"><h3>Technology</h3></div>
-      </div>
-      <div class="row" id=tech-row></div>
     </div>
   </div>
-</div>
-
-
-  
 
 
   <!-- Bootstrap JS -->
@@ -94,6 +99,7 @@
   <script src="src/index.js"></script>
   <script src="src/adapter.js"></script>
   <script src="src/articles.js"></script>
+  <script src="src/savedArticles.js"></script>
 
 </body>
 </html>
